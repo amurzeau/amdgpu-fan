@@ -28,7 +28,7 @@ class FanController:
         while True:
             for name, card in self._scanner.cards.items():
                 temp = card.gpu_temp
-                speed = int(self.curve.get_speed(int(temp)))
+                speed = float(self.curve.get_speed(int(temp)))
                 if speed < 0:
                     speed = 0
 
